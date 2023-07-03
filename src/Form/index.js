@@ -1,4 +1,3 @@
-
 import React,{useState} from "react";
 import './style.css';
 
@@ -6,6 +5,8 @@ const Form = ()=>{
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [product, setproduct]=useState('');
     const [price, setprice] = useState('');
+    const [brand, setbrand] = useState('');
+    const [description, setdescription] = useState('');
 
     const [message, setMessage] = useState("");
 
@@ -16,7 +17,9 @@ const Form = ()=>{
           setMessage("Successfully added product!");
          const data ={
             product: product,
-            price: price
+            price: price,
+            brand:brand,
+            description:description
          }
          console.log({data});
     
@@ -53,7 +56,15 @@ const Form = ()=>{
                 onChange={(p)=>setprice(p.target.value)}/>
                 <br/>
                 <br/>
-                 <button  type="submit">Login</button>
+                <input placeholder=" Enter brand" type="text"
+                onChange={(p)=>setbrand(p.target.value)}/>
+                <br/>
+                <br/>
+                <input placeholder=" Enter description" type="text"
+                onChange={(p)=>setdescription(p.target.value)}/>
+                <br/>
+                <br/>
+                 <button type="submit">Add</button>
             </form>
             {isSubmitted && <p>{message}</p>}
         </div>
