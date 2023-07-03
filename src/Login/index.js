@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import './style.css';
+import { Link } from "react-router-dom";
 
 const Login = ()=>{
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -51,7 +52,7 @@ const Login = ()=>{
                 onChange={(p)=>setPassword(p.target.value)}/>
                 <br/>
                 <br/>
-                 <button  type="submit">Login</button>
+               <Link to={`/home`}> <button  type="submit">Login</button></Link> 
             </form>
             {isSubmitted && <p>{message}</p>}
         </div>

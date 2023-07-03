@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
- import {Link, useNavigate } from "react-router-dom";
+ import {Link } from "react-router-dom";
 import './style.css';
-// import '../NavBar/index';
 import '../DisplayProduct/index';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate
 
 
   useEffect(() => {
@@ -16,10 +14,6 @@ const Products = () => {
     })();
   }, []);
 
-
-  // const handleClick = () => {
-  //   navigate("/product-details");
-  // };
 
   const getProducts = async () => {
     try {

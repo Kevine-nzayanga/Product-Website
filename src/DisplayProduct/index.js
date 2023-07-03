@@ -5,6 +5,7 @@ import './style.css';
 const ProductDetailsPage = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState();
+  
   useEffect(() => {
     const getProductDetails = async () => {
       try {

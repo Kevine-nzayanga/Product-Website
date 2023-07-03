@@ -1,4 +1,6 @@
 import React,{useState} from "react";
+import {Link } from "react-router-dom";
+
 import './style.css';
 
 const Form = ()=>{
@@ -53,18 +55,18 @@ const Form = ()=>{
                 <br/>
                 <br/>
                 <input placeholder=" Enter price" type="text"
-                onChange={(p)=>setprice(p.target.value)}/>
+                onChange={(e)=>setprice(e.target.value)}/>
                 <br/>
                 <br/>
                 <input placeholder=" Enter brand" type="text"
-                onChange={(p)=>setbrand(p.target.value)}/>
+                onChange={(e)=>setbrand(e.target.value)}/>
                 <br/>
                 <br/>
                 <input placeholder=" Enter description" type="text"
-                onChange={(p)=>setdescription(p.target.value)}/>
+                onChange={(e)=>setdescription(e.target.value)}/>
                 <br/>
                 <br/>
-                 <button type="submit">Add</button>
+               <Link to={`/home`}>  <button className="addbutton" type="submit">Add</button></Link>
             </form>
             {isSubmitted && <p>{message}</p>}
         </div>
