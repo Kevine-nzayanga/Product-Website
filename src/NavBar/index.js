@@ -1,5 +1,6 @@
 import React from "react";
 import './style.css';
+import { FaRegUserCircle } from 'react-icons/fa';
 
 
 const Navbar = () => {
@@ -12,10 +13,10 @@ const Navbar = () => {
               <a href="/home">Home</a>
             </li>
             <li>
-               <a href="/">Information</a> 
+               {/* <a href="/">Information</a>  */}
             </li>
             <li>
-                <a href="/login">Login</a>
+                <a href="/login"><FaRegUserCircle/></a>
             </li>
           </ul>
         </nav>

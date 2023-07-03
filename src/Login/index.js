@@ -10,15 +10,17 @@ const Login = ()=>{
 
 
     const handleSubmit = async(e) =>{
+        setMessage("Successfully logged in!");
+   
          e.preventDefault();
          setIsSubmitted(true);
-         setMessage("Successfully logged in!");
          const data ={
             username: username,
             password: password
          }
          console.log({data});
     
+         
         
     try{
     const response = await fetch('https://dummyjson.com/auth/login',{
