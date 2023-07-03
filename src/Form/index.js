@@ -1,47 +1,3 @@
-// import React from "react";
-// import './style.css';
-// import React, { useState } from "react";
-
-// import { useParams } from "react-router";
-
-// const AddProduct = () =>{
-//     const [product, setProduct]= useState("");
-
-//     const handleChange = (event) => {
-//         setProduct(event.target.value);
-//       };
-
-
-// }
-
-
-// const Form = () =>{
-//     return (
-//         <div>
-//             <form className="myForm">
-//                 <h4>Product`s name</h4>
-//                 <input placeholder="Product`s name"></input>
-//                 {/* <br/> */}
-//                 <h4>Description</h4>
-//                 <textarea rows={4} cols={50} placeholder="Description of the product..."></textarea>
-//                 {/* <br/> */}
-//                 <h4>Price</h4>
-//                 <input placeholder="price"></input>
-//                 {/* <br/> */}
-//                 <h4>Discount</h4>
-//                 <input placeholder="DiscountPercentage"></input>
-//                 <br/>
-//                 <br/>
-
-//                  <button className="add" type='submit'>Add Product</button>         
-//             </form>
-//         </div>
-//     )
-// }
-
-// export default Form;
-
-
 
 import React,{useState} from "react";
 import './style.css';
@@ -50,6 +6,7 @@ const Form = ()=>{
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [product, setproduct]=useState('');
     const [price, setprice] = useState('');
+
     const [message, setMessage] = useState("");
 
 
@@ -65,7 +22,7 @@ const Form = ()=>{
     
         
     try{
-    const response = await fetch('https://dummyjson.com/auth/login',{
+    const response = await fetch('https://dummyjson.com/products/add',{
         method:'POST',
         headers:{
         'Content-Type':'application/json',
@@ -86,7 +43,7 @@ const Form = ()=>{
     return (
            <div>
             <form className="form" onSubmit={handleSubmit}>
-                <h1>Login</h1>
+                <h1>Add Product</h1>
                 <input placeholder="Enter Product" type="text" 
                 onChange = {(e)=> setproduct(e.target.value)}
                 />
