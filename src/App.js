@@ -13,7 +13,7 @@ function App() {
      <Navbar/> 
       <BrowserRouter>
       <Routes>
-       <Route index element={<Products/>}/>
+       <Route index element={<Login/>}/>
        <Route path='/home' element={<Products/>}/>
        <Route path='/information/:productId' element={<ProductDetailsPage/>}/>
        <Route path='/form' element={<Form/>}/>
