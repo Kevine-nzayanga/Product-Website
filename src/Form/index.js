@@ -74,3 +74,124 @@ const Form = ()=>{
 }
 
 export default Form;
+
+// import React, { useState } from "react";
+// import "./style.css";
+// import Navbar from "../NavBar";
+
+// const [showForm, setShowForm] = useState(false);
+// const Form = () => {
+//   const [newProduct, setNewProduct] = useState({
+//     id: "",
+//     title: "",
+//     price: "",
+//     discountPercentage: "",
+//     thumbnail: "",
+//   });
+
+
+
+//   const handleInputChange = (e) => {
+//     const { name, value } = e.target;
+//     setNewProduct((prevProduct) => ({
+//       ...prevProduct,
+//       [name]: value,
+//     }));
+//   };
+//   const handleAddProduct = (e) => {
+//     e.preventDefault();
+//     const { id, title, price, discountPercentage, thumbnail } = newProduct;
+//     const product = {
+//       id,
+//       title,
+//       price,
+//       discountPercentage,
+//       thumbnail,
+//     };
+//     // setProducts([product, ...products]);
+//     setShowForm(false);
+//     setNewProduct({
+//       id: "",
+//       title: "",
+//       price: "",
+//       discountPercentage: "",
+//       thumbnail: "",
+//     });
+//   };
+
+//   return (
+//     <div>
+//       <Navbar />
+//       <div>
+//         {showForm ? (
+//           <form onSubmit={handleAddProduct} className="newForm">
+//             <input
+//               type="text"
+//               name="id"
+//               placeholder="ID"
+//               value={newProduct.id}
+//               onChange={handleInputChange}
+//             />
+//             <br/>
+//             <br/>
+//             <input
+//               type="text"
+//               name="title"
+//               placeholder="Title"
+//               value={newProduct.title}
+//               onChange={handleInputChange}
+//             />
+//             <br/>
+//             <br/>
+//             <input
+//               type="text"
+//               name="price"
+//               placeholder="Price"
+//               value={newProduct.price}
+//               onChange={handleInputChange}
+//             />
+//              <br/>
+//             <br/>
+//             <input
+//               type="text"
+//               name="discountPercentage"
+//               placeholder="Discount Percentage"
+//               value={newProduct.discountPercentage}
+//               onChange={handleInputChange}
+//             />
+//             <br/>
+//             <br/>
+//             <input
+//               type="text"
+//               name="thumbnail"
+//               placeholder="Thumbnail URL"
+//               value={newProduct.thumbnail}
+//               onChange={handleInputChange}
+//             />
+//             <br/>
+//             <br/>
+//             <button type="submit" className="add-a-product">Add Product</button>
+//           </form>
+//         ) : (
+//           <button onClick={() => setShowForm(true)} className="add-product">
+//             Add new Product
+//           </button>
+//         )}
+//         {/* <div className="cards">
+//           {products.map((item) => (
+//             <div key={item.id} className="card">
+//               <img src={item.thumbnail} alt={item.title} />
+//               <h3>{item.title}</h3>
+//               <h4>Price: $ {item.price}</h4>
+//               <h4>Discount: {item.discountPercentage} %</h4>
+//               <a href="we">
+//                 <button className="read-product">Read More</button>
+//               </a>
+//             </div>
+//           ))}
+//         </div> */}
+//       </div>
+//     </div>
+//   );
+// };
+// export default Form;
