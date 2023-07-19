@@ -114,7 +114,7 @@ const Products = () => {
           </form>
         ) : (
           <button onClick={() => setShowForm(true)} className="add-product">
-            Add new Product
+            Add Product
           </button>
         )}
         <div className="cards">
