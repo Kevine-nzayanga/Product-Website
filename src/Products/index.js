@@ -126,8 +126,8 @@ const Products = () => {
               <h4>Discount: {item.discountPercentage} %</h4>
               <a href="#">
               <Link to={`/information/${item.id}`} key={item.id} >
-//           <button className="product-link">See Details</button>
-//           </Link>
+             <button className="product-link">See Details</button>
+           </Link>
               </a>
             </div>
           ))}
