@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import './style.css';
 import '../DisplayProduct/index';
 
@@ -124,7 +125,9 @@ const Products = () => {
               <h4>Price: $ {item.price}</h4>
               <h4>Discount: {item.discountPercentage} %</h4>
               <a href="#">
-                <button className="read-product">Read More</button>
+              <Link to={`/information/${item.id}`} key={item.id} >
+//           <button className="product-link">See Details</button>
+//           </Link>
               </a>
             </div>
           ))}
