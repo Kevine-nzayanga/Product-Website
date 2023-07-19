@@ -64,7 +64,7 @@ const Products = () => {
     <div>
       <div>
         {showForm ? (
-          <form onSubmit={handleAddProduct} className="newForm">
+          <form onSubmit={handleAddProduct} className="productadd">
             <input
               type="text"
               name="id"
@@ -77,7 +77,7 @@ const Products = () => {
             <input
               type="text"
               name="title"
-              placeholder="Title"
+              placeholder="Name"
               value={newProduct.title}
               onChange={handleInputChange}
             />
@@ -93,9 +93,10 @@ const Products = () => {
              <br/>
             <br/>
             <input
+           
               type="text"
               name="discountPercentage"
-              placeholder="Discount Percentage"
+              placeholder="Discount"
               value={newProduct.discountPercentage}
               onChange={handleInputChange}
             />
@@ -104,13 +105,13 @@ const Products = () => {
             <input
               type="text"
               name="thumbnail"
-              placeholder="Thumbnail URL"
+              placeholder="Image"
               value={newProduct.thumbnail}
               onChange={handleInputChange}
             />
             <br/>
             <br/>
-            <button type="submit" className="add-a-product">Add Product</button>
+            <button type="submit" className="new">Add</button>
           </form>
         ) : (
           <button onClick={() => setShowForm(true)} className="add-product">
@@ -124,11 +125,9 @@ const Products = () => {
               <h3>{item.title}</h3>
               <h4>Price: $ {item.price}</h4>
               <h4>Discount: {item.discountPercentage} %</h4>
-              <a href="#">
               <Link to={`/information/${item.id}`} key={item.id} >
              <button className="product-link">See Details</button>
            </Link>
-              </a>
             </div>
           ))}
         </div>
